@@ -7,7 +7,13 @@
     <groupId>org.goiot.utils</groupId>
     <artifactId>eval</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <contributors>
+        <contributor>
+            <name>chenxing</name>
+            <email>422803902@QQ.COM</email>
+            <url>https://github.com/cx422803902</url>
+        </contributor>
+    </contributors>
     <dependencies>
         <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
