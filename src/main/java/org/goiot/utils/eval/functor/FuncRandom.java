@@ -1,5 +1,7 @@
 package org.goiot.utils.eval.functor;
 
+import java.math.BigDecimal;
+
 public class FuncRandom extends FunctionBase {
 
 	public FuncRandom() {
@@ -8,7 +10,7 @@ public class FuncRandom extends FunctionBase {
 
 	@Override
 	public Object operate(Object[] operands) {
-		return Math.random();
+		return new BigDecimal(Math.random());
 	}
 
 }

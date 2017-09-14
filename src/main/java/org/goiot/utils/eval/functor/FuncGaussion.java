@@ -1,5 +1,6 @@
 package org.goiot.utils.eval.functor;
 
+import java.math.BigDecimal;
 import java.util.Random;
 
 public class FuncGaussion extends FunctionBase {
@@ -11,6 +12,6 @@ public class FuncGaussion extends FunctionBase {
 
 	@Override
 	protected Object operate(Object[] operands) {
-		return random.nextGaussian();
+		return new BigDecimal(random.nextGaussian());
 	}
 }

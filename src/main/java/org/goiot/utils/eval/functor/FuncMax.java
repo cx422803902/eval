@@ -1,5 +1,7 @@
 package org.goiot.utils.eval.functor;
 
+import java.math.BigDecimal;
+
 public class FuncMax extends FunctionBase {
 
 	public FuncMax() {
@@ -8,7 +10,7 @@ public class FuncMax extends FunctionBase {
 
 	@Override
 	public Object operate(Object[] operands) {
-		return Math.max(((Number) operands[0]).doubleValue(), ((Number) operands[1]).doubleValue());
+		return ((BigDecimal)operands[0]).compareTo((BigDecimal)operands[1]) > 0 ? operands[0] : operands[1];
 	}
 
 }

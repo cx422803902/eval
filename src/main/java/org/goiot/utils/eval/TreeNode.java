@@ -1,5 +1,6 @@
 package org.goiot.utils.eval;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 public class TreeNode {
@@ -91,12 +92,12 @@ public class TreeNode {
 		return value.substring(1, value.length() - 1);
 	}
 
-	private double toValue(String value) {
+	private BigDecimal toValue(String value) {
 		try {
-			return Double.valueOf(value);
+			return new BigDecimal(value);
 		} catch (NumberFormatException e) {
 			ExprException.throwException("常量：%s无法转化成double!", value);
-			return 0;
+			return BigDecimal.ONE;
 		}
 	}
 

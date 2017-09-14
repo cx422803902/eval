@@ -1,5 +1,7 @@
 package org.goiot.utils.eval.functor;
 
+import java.math.BigDecimal;
+
 public class FuncAbs extends FunctionBase {
 
 	public FuncAbs() {
@@ -8,8 +10,7 @@ public class FuncAbs extends FunctionBase {
 
 	@Override
 	public Object operate(Object[] operands) {
-		return (((Number) operands[0]).doubleValue() <= 0.0D) ? 0.0D - ((Number) operands[0]).doubleValue()
-				: operands[0];
+		return ((BigDecimal) operands[0]).abs();
 	}
 
 }

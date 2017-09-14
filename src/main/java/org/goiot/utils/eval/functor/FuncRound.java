@@ -1,5 +1,8 @@
 package org.goiot.utils.eval.functor;
 
+import java.math.BigDecimal;
+import java.math.MathContext;
+
 public class FuncRound extends FunctionBase{
 
 	public FuncRound() {
@@ -8,7 +11,7 @@ public class FuncRound extends FunctionBase{
 	
 	@Override
 	protected Object operate(Object[] operands) {
-		return StrictMath.round(((Number) operands[0]).doubleValue());
+		return ((BigDecimal)operands[0]).round(MathContext.DECIMAL64);
 	}
 	
 }

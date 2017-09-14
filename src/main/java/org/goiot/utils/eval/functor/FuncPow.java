@@ -1,5 +1,7 @@
 package org.goiot.utils.eval.functor;
 
+import java.math.BigDecimal;
+
 public class FuncPow extends FunctionBase {
 
 	public FuncPow() {
@@ -8,7 +10,7 @@ public class FuncPow extends FunctionBase {
 
 	@Override
 	public Object operate(Object[] operands) {
-		return StrictMath.pow(((Number) operands[0]).doubleValue(), ((Number) operands[1]).doubleValue());
+		return ((BigDecimal)operands[0]).pow(((BigDecimal) operands[1]).intValue());
 	}
 
 }

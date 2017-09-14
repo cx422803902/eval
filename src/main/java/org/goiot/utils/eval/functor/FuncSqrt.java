@@ -1,5 +1,7 @@
 package org.goiot.utils.eval.functor;
 
+import java.math.BigDecimal;
+
 public class FuncSqrt extends FunctionBase {
 
 	public FuncSqrt() {
@@ -8,7 +10,7 @@ public class FuncSqrt extends FunctionBase {
 
 	@Override
 	public Object operate(Object[] operands) {
-		return StrictMath.sqrt(((Number) operands[0]).doubleValue());
+		return new BigDecimal(StrictMath.sqrt(((BigDecimal) operands[0]).doubleValue()));
 	}
 
 }

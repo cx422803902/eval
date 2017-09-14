@@ -34,7 +34,6 @@ public class TestEnterPoint {
 		// expr = "~212312.32123&4353.13123123^58976.1231230|987998.1123123";
 		// expr = "min(212.2,121.21)+max(212.21,123.21)+a.b.c";
 		// expr = "a.b.c";
-
 		final TExprParser parser = new TExprParser(expr);
 
 		parser.addFunction(new FuncTest1("test"));
